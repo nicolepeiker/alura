@@ -1,0 +1,97 @@
+<meta charset="UTF-8" />
+
+<h1>EXERCICIOS</h1>
+
+<script>
+  function pulaLinha() {
+    document.write('<br>')
+  }
+
+  function mostraTitulo(mensagem) {
+    document.write('<h3>' + mensagem + '</h3>')
+  }
+
+  function terminaExercicio() {
+    document.write('<hr>')
+  }
+
+  mostraTitulo('Alcool ou Gasolina')
+
+  let tanque = 40
+  let caminhoComGasolina = 480
+  let consumoDeGasolina = caminhoComGasolina / tanque
+  let caminhoComAlcool = 300
+  let consumoDeAlcool = caminhoComAlcool / tanque
+
+  document.write('O consumo de gasolina é de: ' + consumoDeGasolina + '.')
+  document.write('O consumo de alcool é de: ' + consumoDeAlcool + '.')
+  terminaExercicio()
+
+  mostraTitulo('Qual a diferença de idade?')
+
+  function exibeMensagem(mensagem) {
+    document.write(mensagem)
+    pulaLinha()
+  }
+
+  let idade1 = 38
+  let idade2 = 40
+  let diferenca = Math.abs(idade1 - idade2)
+
+  exibeMensagem('Nossa diferença é de idade' + diferenca)
+
+  terminaExercicio()
+
+  mostraTitulo('Desde 1500 até o ano atual, quantas gerações se passaram?')
+
+  let anoAtual = 2021
+  let gerações = Math.round((anoAtual - 1500) / 28)
+
+  exibeMensagem('Desde 1500 tivemos em torno de ' + gerações + 'gerações.')
+
+  terminaExercicio()
+
+  mostraTitulo('Usando a tag big')
+
+  exibeMensagem(
+    'Palavras entre a tag ' + '<big>' + 'big ' + '</big>' + 'ficam maiores.'
+  )
+
+  terminaExercicio()
+
+  mostraTitulo('Será que posso dirigir?')
+
+  let idade = parseInt(prompt('Qual é sua idade?'))
+  let temCarteira = prompt('Tem carteira? Responda S ou N')
+  if (idade >= 18 && temCarteira == 'S') {
+    document.write('Pode dirigir.')
+  } else {
+    document.write('Não pode dirigir.')
+  }
+
+  terminaExercicio()
+
+  mostraTitulo(' Todos os números pares de 1 a 100.')
+
+  let evenNumber = 2
+
+  while (evenNumber <= 100) {
+    document.write(evenNumber)
+    pulaLinha()
+    evenNumber += 2
+  }
+
+  terminaExercicio()
+
+  mostraTitulo('Todos os números entre 30 a 40, exceto 33 e 37!')
+
+  let num = 30
+
+  while (num <= 40) {
+    if (num != 33 && num != 37) {
+      document.write(num)
+      pulaLinha()
+    }
+    num += 1
+  }
+</script>
